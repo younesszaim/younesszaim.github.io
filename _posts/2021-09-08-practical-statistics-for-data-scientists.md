@@ -31,7 +31,7 @@ The typical frame of reference for an analysis in data science is a rectangular 
     - Records : A row within a table is commonly referred to as a record. (Synonyms case, example, instance, observation, pattern, sample)
  
  
-Estimates of Location : Variables with measured or count data might have thousands of distinct values. A basic step in exploring your data is getting a “typical value” for each feature
+#### Estimates of Location : Variables with measured or count data might have thousands of distinct values. A basic step in exploring your data is getting a “typical value” for each feature
 
     - Mean : The sum of all values divided by the number of values. (Synonym average)
     
@@ -40,26 +40,31 @@ Dataset.Column.mean()
 ```
     
     - Weighted mean : The sum of all values times a weight divided by the sum of the weights. (Synonym weighted average)
+    
 ```python
 import numpy as np
 Weighted_Mean = np.average(Dataset.Column, weights=Dataset.ColumnWeight)
     ```
     
     - Median : The value such that one-half of the data lies above and below. (Synonym 50th percentile)
+    
 ```python
 Dataset.Column.median()
 ```
     - Percentile The value such that P percent of the data lies below. (Synonym quantile)
+    
 ```python
 import numpy as np
 Quantile_at_P = np.quantile(Dataset.Column, q=Percentile)
 ````
     - Weighted median The value such that one-half of the sum of the weights lies above and below the sorted data.
+    
 ```python
 import wquantiles
 Weighted_median = wquantiles.median(Dataset.Column, weights=Dataset.ColumnWeight)
 ````
     - Trimmed mean The average of all values after dropping a fixed number of extreme values. (Synonym truncated mean)
+    
  ```python
 from scipy.stats import trim_mean
 Trim_mean = trim_mean(Dataset.Column, proportiontocut)
