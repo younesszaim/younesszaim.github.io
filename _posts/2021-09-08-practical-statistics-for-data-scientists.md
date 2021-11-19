@@ -44,7 +44,7 @@ Dataset.Column.mean()
 ```python
 import numpy as np
 Weighted_Mean = np.average(Dataset.Column, weights=Dataset.ColumnWeight)
-    ```
+```
     
     - Median : The value such that one-half of the data lies above and below. (Synonym 50th percentile)
     
@@ -65,7 +65,7 @@ Weighted_median = wquantiles.median(Dataset.Column, weights=Dataset.ColumnWeight
 ````
     - Trimmed mean The average of all values after dropping a fixed number of extreme values. (Synonym truncated mean)
     
- ```python
+```python
 from scipy.stats import trim_mean
 Trim_mean = trim_mean(Dataset.Column, proportiontocut)
 ````
