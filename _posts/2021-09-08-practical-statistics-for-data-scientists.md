@@ -69,8 +69,39 @@ Weighted_median = wquantiles.median(Dataset.Column, weights=Dataset.ColumnWeight
 from scipy.stats import trim_mean
 Trim_mean = trim_mean(Dataset.Column, proportiontocut)
 ````
- 
- 
+
+#### Estimates of Variability : Location is just one dimension in summarizing a feature. A second dimension, variability,also referred to as dispersion, measures whether the data values are tightly clustered or spread out.
+
+    - Deviations : The difference between the observed values and the estimate of location. (Synonyms errors, residuals)
+    - Variance : TThe sum of squared deviations from the mean divided by n – 1 where n is the number of data values. (Synonym mean-squared-error)
+    - Standard deviation : The square root of the variance.
+    
+```python
+Dataset.Column.std()
+````  
+
+    - Mean absolute deviation : The mean of the absolute values of the deviations from the mean. (Synonyms l1-norm, Manhattan norm)
+    - Median absolute deviation from the median : The median of the absolute values of the deviations from the median.
+    
+```python
+from statsmodels import robust
+robust.scale.mad(Dataset.Column)
+````  
+
+    - Range : The difference between the largest and the smallest value in a data set.
+    - Order statistics Metrics : based on the data values sorted from smallest to biggest. (Synonym ranks)
+    - Percentile : The value such that P percent of the values take on this value or less and (100–P) percent take on this value or more. (Synonym quantile)
+    - Interquartile range : The difference between the 75th percentile and the 25th percentile. (Synonym IQR)
+    
+```python
+Dataset.Column.quantile(0.75) - Dataset.Column.quantile(0.25)
+````      
+
+#### Exploring the Data Distribution
+    
+
+    
+
  
  
  
