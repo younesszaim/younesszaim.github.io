@@ -97,11 +97,30 @@ robust.scale.mad(Dataset.Column)
 Dataset.Column.quantile(0.75) - Dataset.Column.quantile(0.25)
 ````      
 
-#### Exploring the Data Distribution
+#### Exploring the Data Distribution : Each of the estimates we’ve covered sums up the data in a single number to describe the location or variability of the data. It is also useful to explore how the data is distributed overall.
     
+    - Boxplot : A plot introduced by Tukey as a quick way to visualize the distribution of data. (Synonym box and whiskers plot)
+    - Frequency table : A tally of the count of numeric data values that fall into a set of intervals (bins).
+    - Histogram : A plot of the frequency table with the bins on the x-axis and the count (or proportion) on the y-axis. While visually similar, bar charts should                  not be confused with histograms.
+    - Density plot : A smoothed version of the histogram, often based on a kernel density estimate.
 
     
 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  
  
